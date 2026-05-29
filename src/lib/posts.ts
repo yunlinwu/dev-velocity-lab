@@ -12,6 +12,7 @@ export interface PostMeta {
   date: string;
   excerpt: string;
   pillar?: string;
+  youtubeUrl?: string;
 }
 
 export interface Post extends PostMeta {
@@ -32,6 +33,7 @@ export function getAllPosts(): PostMeta[] {
         date: data.date as string,
         excerpt: (data.excerpt as string) ?? "",
         pillar: data.pillar as string | undefined,
+        youtubeUrl: data.youtubeUrl as string | undefined,
       };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -49,6 +51,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     date: data.date as string,
     excerpt: (data.excerpt as string) ?? "",
     pillar: data.pillar as string | undefined,
+    youtubeUrl: data.youtubeUrl as string | undefined,
     content: processed.toString(),
   };
 }
