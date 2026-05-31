@@ -11,6 +11,9 @@ export function Nav() {
           <Link href="/blog" className="transition-colors hover:text-zinc-100">
             Blog
           </Link>
+          <Link href="/videos" className="transition-colors hover:text-zinc-100">
+            Videos
+          </Link>
           <Link href="/about" className="transition-colors hover:text-zinc-100">
             About
           </Link>
