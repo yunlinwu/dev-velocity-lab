@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: "Dev Velocity Lab",
   description:
     "Learning faster. Growing faster. Using AI to level up as an engineer — in real roles, in real time.",
+  metadataBase: new URL("https://yunlinwu.com"),
 };
 
 export default function RootLayout({
