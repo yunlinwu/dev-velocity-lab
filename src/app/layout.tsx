@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   description:
     "Learning faster. Growing faster. Using AI to level up as an engineer — in real roles, in real time.",
   metadataBase: new URL("https://yunlinwu.com"),
+  verification: {
+    google: "JneHjXQdRmb3Kd19E6_VtYNjtoRyOJdM_wGpWzLDO5g",
+  },
 };
 
 export default function RootLayout({
