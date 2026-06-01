@@ -2,6 +2,7 @@ import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ShareButtons } from "@/components/ShareButtons";
 
 export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -77,6 +78,8 @@ export default async function PostPage({
         )}
 
         <hr className="border-zinc-800" />
+
+        <ShareButtons title={post.title} slug={post.slug} />
 
         <div
           className="prose prose-invert prose-zinc max-w-none
