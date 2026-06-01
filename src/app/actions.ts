@@ -1,16 +1,13 @@
 "use server";
 
 export async function subscribeEmail(email: string): Promise<{ ok: boolean; error?: string }> {
-  const apiKey = process.env.KIT_API_KEY;
-  if (!apiKey) return { ok: false, error: "Email service not configured." };
+  const apiSecret = process.env.KIT_API_SECRET;
+  if (!apiSecret) return { ok: false, error: "Email service not configured." };
 
-  const res = await fetch("https://api.kit.com/v4/subscribers", {
+  const res = await fetch("https://api.convertkit.com/v3/subscribers", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({ email_address: email, state: "active" }),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ api_secret: apiSecret, email }),
   });
 
   if (!res.ok) {
