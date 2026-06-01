@@ -15,7 +15,8 @@ export async function subscribeEmail(email: string): Promise<{ ok: boolean; erro
 
   if (!res.ok) {
     const body = await res.json().catch(() => ({}));
-    const message = (body as { message?: string }).message ?? "Something went wrong.";
+    console.error("Kit API error:", res.status, JSON.stringify(body));
+    const message = (body as { message?: string }).message ?? `Kit error ${res.status}`;
     return { ok: false, error: message };
   }
 
