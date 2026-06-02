@@ -1,6 +1,6 @@
 ---
 title: "The Real Skill Isn't Code—It's Orchestration"
-date: "2026-06-02"
+date: "2026-06-01"
 youtubeUrl: "https://youtu.be/nuDHfxQqmkU"
 excerpt: "Your teammates who skip AI aren't being careful. They're being replaced. Here's the judgment call that actually matters."
 pillar: "ai-workflows-for-learning"
